@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: cartservice
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,7 +30,7 @@ spec:
       labels:
         app: cartservice
     spec:
-      serviceAccountName: default
+      serviceAccountName: cartservice
       terminationGracePeriodSeconds: 5
       securityContext:
         fsGroup: 1000

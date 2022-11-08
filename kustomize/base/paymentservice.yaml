@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: paymentservice
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,7 +30,7 @@ spec:
       labels:
         app: paymentservice
     spec:
-      serviceAccountName: default
+      serviceAccountName: paymentservice
       terminationGracePeriodSeconds: 5
       securityContext:
         fsGroup: 1000
@@ -47,8 +52,6 @@ spec:
         env:
         - name: PORT
           value: "50051"
-        - name: DISABLE_TRACING
-          value: "1"
         - name: DISABLE_PROFILER
           value: "1"
         - name: DISABLE_DEBUGGER

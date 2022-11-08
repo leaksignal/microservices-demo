@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: redis-cart
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,6 +30,7 @@ spec:
       labels:
         app: redis-cart
     spec:
+      serviceAccountName: redis-cart
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
