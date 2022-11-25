@@ -257,7 +257,7 @@ spec:
               - all
           privileged: false
           readOnlyRootFilesystem: true
-        image: wesleyhales/frontend-ls:latest
+        image: gcr.io/google-samples/microservices-demo/loadgenerator:v0.4.1
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -589,7 +589,7 @@ spec:
                 - all
             privileged: false
             readOnlyRootFilesystem: true
-          image: gcr.io/google-samples/microservices-demo/frontend:v0.4.1
+          image: wesleyhales/frontend-ls:latest
           ports:
           - containerPort: 8080
           readinessProbe:
