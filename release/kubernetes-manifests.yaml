@@ -416,7 +416,7 @@ spec:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: checkoutservice
+  name: currencyservice
 ---
 apiVersion: apps/v1
 kind: Deployment
