@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "data": {
+    "amount": "10",
+    "productinfo": "product_info",
+    "key": "gtKFFx",
+    "txnid": "ab2fedaf8707b738d760",
+    "firstname": "Rohit",
+    "email": "example@gmail.com",
+    "phone": "78xxxx83",
+    "surl": "https://example.com/success",
+    "furl": "https://example.com/failure",
+    "payment_hash": "1147c0f72ad57ab8307e518c8255150eb55f8343c0a81ba6886ca76bf4385ec3524d8d620518b590d9c43e7a6733ffad2104b773c9647c74cf4b5d7d244b3d4f",
+    "vas_for_mobile_sdk": "7da0f4fef5bab0e5034f37f9503bdcbede00cc2cd0cf6cbb4e43baa9d57f05680305885199e2b0d38e8cf12895fd06f4d3dd3fb422535feeb555adc58e2cf3cc",
+    "payment_related_details_for_mobile_sdk": "110f85b862578214e5c38637762a6fce9c34bd5e2d78bc34a486f0ee2e3e5d0fada221795de4b67952ec2cff6b4d0fe8877506e7a5480bbdbfdf9045521d8523",
+    "get_merchant_ibibo_codes": "307374123fb8d720d41361470984947f7f5c33ac4832598149bf1d108ea9b2ccefd7b46fe4ee4c021f67838a67f355a74f3c2d79bb37373d3b248a802c7159e2",
+    "delete_user_card": "896911ed3cd4b994699b67516efac6e77424216aa5eb13a9400bd9b1aade05f8d5289a7fae0549927c085d55345d846b632169f54ee7b7ace3d80f6f9229d9dc",
+    "get_user_cards": "1230644aa240e09d801de4e149e6211070a01c2c1de92004d0e8ee11724f4e797f3dfaa10a1c3a89a52b6dcbdc4957a6e1f745ad6d1a02d530beb5b77ea75516",
+    "edit_user_card": "0eeb0c54bb46ce44059e7fa6ef02217edcd79a7eba89296a6a851b72076f2ec9ae9619d4b917062f4707a12ae5da73856baaea456674ad4a9193c803087bb4ab",
+    "save_user_card": "1b32b3f37309e02f9035c109c0d96510aede4d92e20645c30b655a3349a8839b1b756343efa8fef25b11f7ce8c56f14d9eaf1870a8d08ea4e7b79d62d8cdb592",
+    "check_offer_status": "364eaf6784f802a33b650694add2f049f648c45070b77e4fd859d32cfcbe98ccfb5dcc715ef13c8f98098114c0267b33335a5340272c6ae7d8c25274db7dd91d"
+  }
+}
