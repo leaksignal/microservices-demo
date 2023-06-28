@@ -27,11 +27,6 @@ spec:
       labels:
         app: opentelemetrycollector
     spec:
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       # Init container retrieves the current cloud project id from the metadata server
       # and inserts it into the collector config template
       # https://cloud.google.com/compute/docs/storing-retrieving-metadata

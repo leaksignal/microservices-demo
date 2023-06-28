@@ -32,15 +32,11 @@ spec:
         app: loadgenerator
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: loadgenerator
       terminationGracePeriodSeconds: 5
       restartPolicy: Always
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       initContainers:
       - command:
         - /bin/sh

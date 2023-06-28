@@ -29,14 +29,11 @@ spec:
     metadata:
       labels:
         app: recommendationservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: recommendationservice
       terminationGracePeriodSeconds: 5
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:

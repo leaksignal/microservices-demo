@@ -31,13 +31,9 @@ spec:
         app: frontend
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: frontend
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
         - name: server
           securityContext:

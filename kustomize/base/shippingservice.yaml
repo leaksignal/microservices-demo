@@ -29,13 +29,10 @@ spec:
     metadata:
       labels:
         app: shippingservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: shippingservice
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:

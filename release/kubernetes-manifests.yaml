@@ -35,14 +35,11 @@ spec:
     metadata:
       labels:
         app: productcatalogservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: productcatalogservice
       terminationGracePeriodSeconds: 5
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:
@@ -133,13 +130,10 @@ spec:
     metadata:
       labels:
         app: checkoutservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: checkoutservice
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
         - name: server
           securityContext:
@@ -216,15 +210,11 @@ spec:
         app: loadgenerator
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: loadgenerator
       terminationGracePeriodSeconds: 5
       restartPolicy: Always
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       initContainers:
       - command:
         - /bin/sh
@@ -288,13 +278,10 @@ spec:
     metadata:
       labels:
         app: redis-cart
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: redis-cart
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: redis
         securityContext:
@@ -359,14 +346,11 @@ spec:
     metadata:
       labels:
         app: adservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: adservice
       terminationGracePeriodSeconds: 5
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:
@@ -430,14 +414,11 @@ spec:
     metadata:
       labels:
         app: currencyservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: currencyservice
       terminationGracePeriodSeconds: 5
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:
@@ -502,13 +483,10 @@ spec:
     metadata:
       labels:
         app: shippingservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: shippingservice
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:
@@ -573,13 +551,9 @@ spec:
         app: frontend
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: frontend
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
         - name: server
           securityContext:
@@ -684,14 +658,11 @@ spec:
     metadata:
       labels:
         app: recommendationservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: recommendationservice
       terminationGracePeriodSeconds: 5
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:
@@ -759,14 +730,11 @@ spec:
     metadata:
       labels:
         app: emailservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: emailservice
       terminationGracePeriodSeconds: 5
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:
@@ -830,14 +798,11 @@ spec:
     metadata:
       labels:
         app: paymentservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: paymentservice
       terminationGracePeriodSeconds: 5
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:
@@ -901,14 +866,11 @@ spec:
     metadata:
       labels:
         app: cartservice
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: cartservice
       terminationGracePeriodSeconds: 5
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: server
         securityContext:

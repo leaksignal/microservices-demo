@@ -29,13 +29,10 @@ spec:
     metadata:
       labels:
         app: redis-cart
+      annotations:
+        sidecar.istio.io/inject: 'true'
     spec:
       serviceAccountName: redis-cart
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: redis
         securityContext:
